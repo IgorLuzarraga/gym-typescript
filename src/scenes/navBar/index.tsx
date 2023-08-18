@@ -1,5 +1,7 @@
 import { SelectedPage } from "../../share/types"
 import useMediaQuery from '../../hooks/useMediaQuery'
+import NavAvobeMediumScreen from "./NavAvobeMediumScreen"
+import NavSmallScreen from "./NavSmallScreen"
 
 type Props = {
     isTopOfPage: boolean,
@@ -18,11 +20,11 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                 {isAboveMediumScreens
                     ? <NavAvobeMediumScreen
                         selectedPage={selectedPage}
-                        setSelectedPAge={setSelectedPage}
+                        setSelectedPage={setSelectedPage}
                     />
-                    : <NavAvobeMediumScreen
+                    : <NavSmallScreen
                         selectedPage={selectedPage}
-                        setSelectedPAge={setSelectedPage}
+                        setSelectedPage={setSelectedPage}
                     />
                 }
             </div>

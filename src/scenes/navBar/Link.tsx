@@ -25,7 +25,7 @@ const Link = ({
     page,
     selectedPage,
     setSelectedPage
-}: Props) => {
+}: Props) =>
     <AnchorLink
         className={`${selectedPage === page ? "text-primary-500" : ""}
         transition duration-500 hover:text-primary-300
@@ -35,6 +35,6 @@ const Link = ({
     >
         {fromSelectedPageToPageName(page)}
     </AnchorLink>
-}
+
 
 export default Link
