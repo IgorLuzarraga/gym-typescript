@@ -1,9 +1,11 @@
+import NavBar from './scenes/navBar'
+
 function App() {
 
   return (
-    <>
-      app
-    </>
+    <div className="app bg-gray-20">
+      <NavBar />
+    </div>
   )
 }
 
