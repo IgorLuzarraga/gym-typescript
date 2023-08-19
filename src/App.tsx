@@ -1,6 +1,11 @@
-import NavBar from './scenes/navBar'
 import { useEffect, useState } from "react";
+import Home from "./scenes/home/Home";
+import Benefits from "./scenes/benefits/Benefits";
+import Footer from "./scenes/footer/Footer";
 import { SelectedPage } from "./share/types";
+import OurClasses from "./scenes/ourClasses/OurClasses";
+import ContactUs from "./scenes/contactUs/ContactUs";
+import NavBar from "./scenes/navBar";
 
 function App() {
   const [selectedPage, setSelectedPage] =
@@ -28,6 +33,19 @@ function App() {
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
+      <Home
+        setSelectedPage={setSelectedPage}
+      />
+      <Benefits
+        setSelectedPage={setSelectedPage}
+      />
+      <OurClasses
+        setSelectedPage={setSelectedPage}
+      />
+      <ContactUs
+        setSelectedPage={setSelectedPage}
+      />
+      <Footer />
     </div>
   )
 }
