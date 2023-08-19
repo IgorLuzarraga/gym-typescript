@@ -7,7 +7,7 @@ import SponsorForbes from '../../assets/SponsorForbes.png'
 import SponsorFortune from '../../assets/SponsorFortune.png'
 import HomePageText from '../../assets/HomePageText.png'
 import HomePageGraphic from '../../assets/HomePageGraphic.png'
-import EvolveText from '../../assets/EvolveText.png'
+// import EvolveText from '../../assets/EvolveText.png'
 
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
