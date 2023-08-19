@@ -7,6 +7,7 @@ import SponsorForbes from '../../assets/SponsorForbes.png'
 import SponsorFortune from '../../assets/SponsorFortune.png'
 import HomePageText from '../../assets/HomePageText.png'
 import HomePageGraphic from '../../assets/HomePageGraphic.png'
+import EvolveText from '../../assets/EvolveText.png'
 
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
@@ -56,10 +57,30 @@ const Headings = () =>
             visible: { opacity: 1, x: 0 }
         }}
     >
-        <div className="relative">
+        {/* --------------------------------------------------------------------- */}
+        {/* Both ways are similar (visually they look similar) */}
+
+        {/* <div className="relative">
             <div className="before:absolute before:-top-20 before:-left-20 before:z-[-1] md:before:content-evolvetext">
                 <img alt="home-page-text" src={HomePageText} />
             </div>
+        </div> */}
+
+        <div className="relative">
+            {/* Image on top */}
+            <img
+                alt="home-page-text"
+                src={HomePageText}
+            />
+
+            {/* Image behind, with responsive behavior */}
+            <img
+                alt="Evolve text image"
+                src={EvolveText}
+                className="absolute -top-14 -left-20 z-[-1] hidden md:block"
+            />
+            {/* --------------------------------------------------------------------- */}
+
         </div>
 
         <p className="mt-8 text-sm md:text-sm">
