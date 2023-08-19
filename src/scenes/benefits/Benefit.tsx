@@ -17,6 +17,7 @@ type Props = {
 const Benefit = ({ icon, title, description, setSelectedPage }: Props) => {
     return (
         <motion.div
+            transition={{ duration: 0.5 }}
             variants={childVariant}
             className="mt-5 rounded-md border-2 border-gray-100 px-5 py-16 text-center"
         >

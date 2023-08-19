@@ -13,3 +13,19 @@ body,
     font-family: "DM Sans", sans-serif;
     @apply text-gray-500
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #FFE1E0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #FFA6A3;
+}
+
+::-webkit-scrollbar-track:hover {
+    background: #FF6B66;
+}
