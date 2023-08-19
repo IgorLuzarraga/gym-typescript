@@ -21,7 +21,7 @@ const Home = ({ setSelectedPage }: Props) => {
     return (
         <section
             id="home"
-            className="flex flex-col gap-16 bg-gray-20 py-10 md:h-full md:pb-6"
+            className="flex flex-col gap-16 bg-gray-20 py-10 md:h-full md:pb-0"
         >
             {/* IMAGE AND MAIN HEADER */}
             <motion.div
@@ -58,30 +58,31 @@ const Headings = () =>
         }}
     >
         {/* --------------------------------------------------------------------- */}
-        {/* Both ways are similar (visually they look similar) */}
+        {/* Both ways are similar (visually they look similar) , but in the second one, the
+        image EvolveText looks smaller than in the first method, I don't know why*/}
 
-        {/* <div className="relative">
+        <div className="relative">
             <div className="before:absolute before:-top-20 before:-left-20 before:z-[-1] md:before:content-evolvetext">
                 <img alt="home-page-text" src={HomePageText} />
             </div>
-        </div> */}
+        </div>
 
-        <div className="relative">
-            {/* Image on top */}
+        {/* <div className="relative">
+            // Image on top 
             <img
                 alt="home-page-text"
                 src={HomePageText}
             />
 
-            {/* Image behind, with responsive behavior */}
+            //mage behind, with responsive behavior 
             <img
                 alt="Evolve text image"
                 src={EvolveText}
-                className="absolute -top-14 -left-20 z-[-1] hidden md:block"
+                className="absolute -top-16 -left-20 z-[-1] hidden md:block"
             />
-            {/* --------------------------------------------------------------------- */}
+        </div> */}
 
-        </div>
+        {/* --------------------------------------------------------------------- */}
 
         <p className="mt-8 text-sm md:text-sm">
             Unrivaled Gym. Unparalleled Training Fitness Classes. World Class
