@@ -77,7 +77,7 @@ const Form = () => {
                 target="_blank"
                 onSubmit={onSubmit}
                 // action="https://formsubmit.co/e8a5bdfa807605332f809e5656e27c6e"
-                action="https://formsubmit.co/iluzarraga@gmail.com"
+                action="https://formsubmit.co/f73d2fb1f3c522779fd05f7c01aa8931"
                 method="POST"
             >
                 <input
@@ -100,6 +100,7 @@ const Form = () => {
                     className={inputStyles}
                     type="text"
                     placeholder="EMAIL"
+
                     {...register("email", {
                         required: true,
                         pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
