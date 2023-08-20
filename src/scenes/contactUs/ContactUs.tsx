@@ -54,12 +54,12 @@ const Form = () => {
         formState: { errors },
     } = useForm()
 
-    const onSubmit = async (e: any) => {
-        const isValid = await trigger()
+    const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        const isValid = await trigger();
         if (!isValid) {
-            e.preventDefault()
+            e.preventDefault(); // Prevent the default form submission behavior
         }
-    }
+    };
 
     return (
         <motion.div
@@ -69,7 +69,7 @@ const Form = () => {
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.5 }}
             variants={{
-                hidden: { opacity: 0, y: 50 },
+                hidden: { opacity: 0, y: 80 },
                 visible: { opacity: 1, y: 0 },
             }}
         >
@@ -90,7 +90,7 @@ const Form = () => {
                 />
                 {errors.name && (
                     <p className="mt-1 text-primary-500">
-                        {errors.name.type === "required" && "This field is requires."}
+                        {errors.name.type === "required" && "This field is required."}
                         {errors.name.type === "maxLength" && "Max length is 100 char."}
                     </p>
                 )}
@@ -106,7 +106,7 @@ const Form = () => {
                 />
                 {errors.email && (
                     <p className="mt-1 text-primary-500">
-                        {errors.email.type === "required" && "This field is requires."}
+                        {errors.email.type === "required" && "This field is required."}
                         {errors.email.type === "pattern" && "Invalid email address."}
                     </p>
                 )}
@@ -122,7 +122,7 @@ const Form = () => {
                 />
                 {errors.message && (
                     <p className="mt-1 text-primary-500">
-                        {errors.message.type === "required" && "This field is requires."}
+                        {errors.message.type === "required" && "This field is required."}
                         {errors.message.type === "maxLength" && "Max length is 2000 char."}
                     </p>
                 )}
