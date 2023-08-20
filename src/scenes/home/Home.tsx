@@ -20,7 +20,7 @@ const Home = ({ setSelectedPage }: Props) => {
 
     return (
         <section
-            id="home"
+            id={SelectedPage.Home}
             className="flex flex-col gap-16 bg-gray-20 py-10 md:h-full md:pb-0"
         >
             {/* IMAGE AND MAIN HEADER */}
