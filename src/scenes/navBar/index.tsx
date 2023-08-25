@@ -12,7 +12,7 @@ type Props = {
 
 const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
     const isAboveMediumScreens = useMediaQuery("(min-width: 1060px")
-    const navbarBackground = isTopOfPage ? "" : "bg-primary-100 grop-shadow"
+    const navbarBackground = isTopOfPage ? "" : "bg-primary-100 shadow-2xl"
 
     return (
         <div className={`${navbarBackground} fixed top-0 z-30 w-full py-6`}>
